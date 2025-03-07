@@ -1,14 +1,28 @@
 body {
   background: #fafafa;
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+nav ul {
+  list-disc: none;
+  padding-left: 0;
+  text-align: center;
 }
 
 header,
-#hero,
+.flex-wrap,
 #portfolio,
 #contact,
-footer,
-.col {
+.col,
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero {
   display: flex;
   flex-direction: column;
 }
@@ -18,11 +32,29 @@ h3,
 h4 {
   text-align: center;
 }
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-weight: 300;
+  color: #666;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+
+#portfolio {
+  display: flex;
+  gap: 15px;
+}
 
 .col {
-  align-items: center;
   display: flex;
   flex-grow: 1;
+  text-align: center;
 }
 img {
   width: auto;
@@ -38,6 +70,34 @@ img {
   .backtotop {
     display: none;
   }
+  header,
+  #hero,
+  footer {
+    flex-direction: row;
+  }
+  header,
+  #hero,
+  #portfolio,
+  #contact,
+  footer {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  #hero h2 {
+    width: 65%;
+  }
+  #hero img {
+    width: 35%;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 30px;
+  }
+  .col {
+    flex-basis: 300px;
+    flex-wrap: wrap;
+  }
 }
 
 /* Media Queries Desktop and Larger */
@@ -45,5 +105,8 @@ img {
 @media (min-width: 1024px) {
   .footer-menu {
     display: visible;
+  }
+  .col {
+    flex-basis: 400px;
   }
 }
