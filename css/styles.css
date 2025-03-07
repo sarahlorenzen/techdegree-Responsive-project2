@@ -2,6 +2,33 @@ body {
   background: #fafafa;
   font-family: "Roboto", sans-serif;
 }
+
+header,
+#hero,
+#portfolio,
+#contact,
+footer,
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h3,
+h4 {
+  text-align: center;
+}
+
+.col {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+}
+img {
+  width: auto;
+  max-width: 100%;
+}
+
 .footer-menu {
   display: none;
 }
