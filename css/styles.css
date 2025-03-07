@@ -1,0 +1,22 @@
+body {
+  background: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+.footer-menu {
+  display: none;
+}
+/* Media Queries Tablet and Larger */
+
+@media (min-width: 768px) {
+  .backtotop {
+    display: none;
+  }
+}
+
+/* Media Queries Desktop and Larger */
+
+@media (min-width: 1024px) {
+  .footer-menu {
+    display: visible;
+  }
+}
