@@ -3,20 +3,34 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 1.6;
+  color: #666;
 }
 
 nav ul {
-  list-disc: none;
+  list-style: none;
   padding-left: 0;
   text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+nav li {
+  background: #fff;
+  margin: 10px;
+  padding: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #666;
 }
 
 header,
 .flex-wrap,
 #portfolio,
 #contact,
-.col,
-footer {
+.col {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -24,31 +38,50 @@ footer {
 
 #hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  padding: 25px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px;
 }
 
 h1,
 h3,
 h4 {
   text-align: center;
+  color: #444;
 }
 h1 {
   font-size: 2.5rem;
+  margin: 10px auto 0;
 }
 h2 {
   font-weight: 300;
   color: #666;
-}
+  text-align: center;
+  font-size: 1.6rem;
+} /* h2 is used for the hero text to keep heading hierarchy */
+
 h3 {
   font-size: 1.75rem;
+  text-transform: uppercase;
 }
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 0;
 }
 
 #portfolio {
   display: flex;
   gap: 15px;
+  background: #fff;
+  padding: 40px 20px;
 }
 
 .col {
@@ -61,33 +94,95 @@ img {
   max-width: 100%;
 }
 
+#portfolio p {
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+#contact {
+  display: flex;
+  gap: 15px;
+  padding: 40px 20px;
+  border-bottom: 1px solid #999;
+}
+
+#contact p {
+  font-weight: 300;
+  color: #666;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+#contact a {
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
 .footer-menu {
   display: none;
+  text-decoration: none;
+  text-transform: uppercase;
 }
+
+footer p {
+  font-weight: 600;
+  color: #666;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+
+footer a {
+  font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 /* Media Queries Tablet and Larger */
 
 @media (min-width: 768px) {
   .backtotop {
     display: none;
   }
-  header,
+
   #hero,
   footer {
     flex-direction: row;
+  }
+  header {
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+  nav li {
+    background: transparent;
   }
   header,
   #hero,
   #portfolio,
   #contact,
   footer {
-    max-width: 80%;
     margin: 0 auto;
   }
   #hero h2 {
-    width: 65%;
+    max-width: 65%;
+    text-align: left;
+    font-size: 1.4rem;
   }
   #hero img {
-    width: 35%;
+    width: 100%;
+    max-width: 35%;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -98,15 +193,32 @@ img {
     flex-basis: 300px;
     flex-wrap: wrap;
   }
+  .footer-menu {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    list-style: none;
+    padding-left: 0;
+  }
 }
 
 /* Media Queries Desktop and Larger */
 
 @media (min-width: 1024px) {
-  .footer-menu {
-    display: visible;
+  #portfolio .col {
+    flex-basis: 30%;
   }
-  .col {
-    flex-basis: 400px;
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin: 10px;
+  }
+  #hero h2 {
+    font-size: 1.5rem;
+    padding-right: 25px;
   }
 }
